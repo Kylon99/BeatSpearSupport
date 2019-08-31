@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nike4613/ModSaber-MetadataFileSchema/master/Schema.json",
+  "author": "Kylon99",
+  "description": "Beat Spear mode support MOD for Beat Saber",
+  "features": [],
+  "gameVersion": "1.3.0",
+  "id": "beatSpearSupportMod",
+  "name": "BeatSpearSupportMod",
+  "version": "0.1.0"
+}
