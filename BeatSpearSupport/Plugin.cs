@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BeatSpearSupportMod
+namespace BeatSpearSupport
 {
     public class Plugin : IBeatSaberPlugin
     {
@@ -16,7 +16,7 @@ namespace BeatSpearSupportMod
 
         private BeatSpearSupport beatSpearSupport;
 
-        public string Name => BeatSpearSupport.Name;
+        public string Name => BeatSpearSupport.assemblyName;
         public string Version => "0.1.0";
 
         public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)

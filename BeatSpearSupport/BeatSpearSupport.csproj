@@ -7,8 +7,8 @@
     <ProjectGuid>{EAF41569-91AA-4411-8194-1E7628949EAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BeatSpearSupportMod</RootNamespace>
-    <AssemblyName>BeatSpearSupportMod</AssemblyName>
+    <RootNamespace>BeatSpearSupport</RootNamespace>
+    <AssemblyName>BeatSpearSupport</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -71,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logging.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BeatSpearSupport.cs" />
@@ -78,5 +79,14 @@
   <ItemGroup>
     <EmbeddedResource Include="manifest.json" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BeatSpear.png" />
+    <Content Include="Resources\BeatSpear.svg" />
+    <Content Include="Resources\BeatSpear64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy BeatSpearSupport.dll "C:\Program Files (x86)\Steam\steamapps\common\Beat Saber\Plugins"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
