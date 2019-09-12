@@ -1,6 +1,5 @@
 ﻿using CustomUI.GameplaySettings;
 using CustomUI.Utilities;
-using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
@@ -37,11 +36,11 @@ namespace BeatSpearSupport
             var beatSpearIcon = UIUtilities.LoadSpriteFromResources(iconResource);
 
             var beatSpearMenu = GameplaySettingsUI.CreateSubmenuOption(
-                GameplaySettingsPanels.ModifiersRight, 
+                GameplaySettingsPanels.ModifiersRight,
                 "Beat Spear Settings",
                 "MainMenu",
-                "BeatSpearMenu", 
-                "Beat Spear Support options", 
+                "BeatSpearMenu",
+                "Beat Spear Support options",
                 beatSpearIcon);
 
             var beatSpearToggle = GameplaySettingsUI.CreateToggleOption(

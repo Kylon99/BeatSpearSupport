@@ -81,6 +81,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <EmbeddedResource Include="Resources\BeatSpearColored.png" />
+    <Content Include="Resources\BeatSpearColored.svg" />
     <EmbeddedResource Include="Resources\BeatSpear.png" />
     <Content Include="Resources\BeatSpear.svg" />
     <Content Include="Resources\BeatSpear64.png" />
