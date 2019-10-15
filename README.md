@@ -1,13 +1,17 @@
 # ![IMG](BeatSpearSupport/Resources/BeatSpear64.png) Beat Spear Support
 
-This mod provides support for playing Beat Saber in Spear mode.  When the option is 
-enabled, Standard and No Arrows maps will be converted to One Color, with both
-sabers being able to hit both blocks.  Scoring will also be disabled.  One Saber maps
-will not be transformed and you can use No Arrows on those instead to play.
+This mod supports playing Beat Saber in Spear mode.  In the modifiers panel, select Beat Spear Settings and you will see four options to choose from:
 
-The idea behind playing Spear is to mount your controller or screw on a Vive Tracker
-onto a long shaft and wield it like a spear. More explanations on the best ways to
-do this will be coming in this README later.
+* Two Controller Spear - Use your regular two controllers to control a two-handed
+spear.  While you play you can press trigger on the hand you wish to be the forward hand.  Do not use this with Darth Maul mode.
+
+* One Color - Modifies the Standard and No Arrows maps into One Color with No Arrows.  Can be used for Spear mode or independently with other mods.
+
+* Left Spear - Uses the left saber and its color instead of the right to start. Haptic feedback is also on the left hand instead of the right.
+
+* Remove Other Spear - Disables the offhand spear that you are not using.  Do not use this with Darth Maul mode.
+
+You can still play Spear mode by mounting a controller or a Vive Tracker onto a long shaft and wield it like a physical spear.  In that case do not select the Two Controller Spear option.
 
 ## Requirements
 This mod depends on the following mods.  Download them at [BeatMods](https://beatmods.com).
@@ -21,6 +25,13 @@ This mod depends on the following mods.  Download them at [BeatMods](https://bea
 Drop the BeatSpearSupport.dll file into your Plugins folder under your BeatSaber folder.
 
 ## Changelog
+
+### 0.2.0
+
+* Added support for Two Controller spear
+* Added option to remove offhand spear
+* Renamed the Beat Spear option to One Color
+
 ### 0.1.0
 
 * Initial working version of Beat Spear Support

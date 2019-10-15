@@ -1,4 +1,5 @@
 ﻿using IPA;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,19 +7,18 @@ namespace BeatSpearSupport
 {
     public class Plugin : IBeatSaberPlugin
     {
+        public const string assemblyName = "BeatSpearSupport";
         private const string MenuScene = "MenuCore";
         private const string GameScene = "GameCore";
 
-        private BeatSpearSupport beatSpearSupport;
-
-        public string Name => BeatSpearSupport.assemblyName;
-        public string Version => "0.1.0";
+        private static BeatSpearSupport beatSpearSupport;
+        private BeatSpearModifiersUI beatSpearModifiersUI;
 
         public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
         {
             if (nextScene.name == GameScene)
             {
-                SharedCoroutineStarter.instance.StartCoroutine(this.beatSpearSupport.TransformBeatMap());
+                SharedCoroutineStarter.instance.StartCoroutine(WaitForGameScene());
             }
         }
 
@@ -28,7 +28,8 @@ namespace BeatSpearSupport
 
         public void OnApplicationStart()
         {
-            beatSpearSupport = new GameObject(nameof(BeatSpearSupport)).AddComponent<BeatSpearSupport>();
+            PersistentSingleton<ConfigOptions>.TouchInstance();
+            beatSpearModifiersUI = new GameObject(nameof(BeatSpearModifiersUI)).AddComponent<BeatSpearModifiersUI>();
         }
 
         public void OnFixedUpdate()
@@ -39,7 +40,7 @@ namespace BeatSpearSupport
         {
             if (scene.name == MenuScene)
             {
-                this.beatSpearSupport.CreateBeatSpearSupportModifiers();
+                this.beatSpearModifiersUI.CreateBeatSpearSupportModifiers();
             }
         }
 
@@ -49,6 +50,13 @@ namespace BeatSpearSupport
 
         public void OnUpdate()
         {
+        }
+
+        private static IEnumerator WaitForGameScene()
+        {
+            yield return new WaitForSecondsRealtime(0.1f);
+            if (beatSpearSupport == null) beatSpearSupport = new GameObject(nameof(BeatSpearSupport)).AddComponent<BeatSpearSupport>();
+            beatSpearSupport.BeginGameCoreScene();
         }
     }
 }
