@@ -26,6 +26,10 @@ Drop the BeatSpearSupport.dll file into your Plugins folder under your BeatSaber
 
 ## Changelog
 
+### 0.2.1
+
+* Updated manifest BS Utils version to latest 1.3.6
+
 ### 0.2.0
 
 * Added support for Two Controller spear
