@@ -26,6 +26,10 @@ Drop the BeatSpearSupport.dll file into your Plugins folder under your BeatSaber
 
 ## Changelog
 
+### 0.2.2
+* Updated manifest to indicate support for Beat Saber 1.5.0
+* Minor update to icons
+
 ### 0.2.1
 
 * Updated manifest BS Utils version to latest 1.3.6
